@@ -48,12 +48,10 @@ fourLoop(4);
 
 const fiveLoop = (year, age) => {
   total = year;
-  totalAge = age;
   for (let counter = 0; counter <= 10; counter++) {
     total = total + 1;
-    totalAge = totalAge + 1;
     console.log(`Naciste en el año ${year}`);
-    console.log(`En el año ${total} cumpliste ${totalAge}`);
+    console.log(`En el año ${total} cumpliste ${}`);
   }
 };
 fiveLoop(2000, 21);

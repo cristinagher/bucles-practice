@@ -46,12 +46,51 @@ const fourLoop = (number) => {
 };
 fourLoop(4);
 
+//Crea una función que reciba el año actual y tu edad, la función debe imprimir:
+
 const fiveLoop = (year, age) => {
-  total = year;
-  for (let counter = 0; counter <= 10; counter++) {
-    total = total + 1;
-    console.log(`Naciste en el año ${year}`);
-    console.log(`En el año ${total} cumpliste ${}`);
+  console.log(`Naciste en el año ${year - age}`);
+  for (let counter = 1; counter <= age; counter++) {
+    if (year - age + counter === year - age + 1) {
+      console.log(`En el año ${year - age + counter} cumpliste ${counter} año`);
+    } else {
+      console.log(
+        `En el año ${year - age + counter} cumpliste ${counter} años`
+      );
+    }
   }
 };
-fiveLoop(2000, 21);
+fiveLoop(2024, 24);
+
+//Crea una función que reciba dos números e imprima todos los números pares desde el primero hasta el segundo. Si recibe 2 y 12 imprimirá 2, 4, 6, 8, 10, 12.
+
+const sixLoop = (x, y) => {
+  for (let counter = x; counter <= y; counter++) {
+    if (counter % 2 === 0 && counter < y) {
+      console.log(counter);
+    }
+  }
+};
+sixLoop(2, 7);
+
+//Crea una función que genere 2 arrays y los rellene con 5 números aleatorios cada uno, la función debe decir qué valores se han repetido en los dos arrays
+
+const sevenLoop = () => {
+  const firstArray = [];
+  const secondArray = [];
+  for (let counter = 0; counter < 5; counter++) {
+    const randomNumberA = Math.floor(Math.random() * 11);
+    const randomNumberB = Math.floor(Math.random() * 11);
+    firstArray.push(randomNumberA);
+    secondArray.push(randomNumberB);
+  }
+  console.log(firstArray);
+  console.log(secondArray);
+  for (let counter = 0; counter < 5; counter++) {
+    if (firstArray.includes(secondArray[counter])) {
+      console.log(`Se repite el número ${secondArray[counter]}´);
+    }
+  }
+};
+
+sevenLoop();

@@ -75,22 +75,36 @@ sixLoop(2, 7);
 
 //Crea una función que genere 2 arrays y los rellene con 5 números aleatorios cada uno, la función debe decir qué valores se han repetido en los dos arrays
 
-const sevenLoop = () => {
-  const firstArray = [];
-  const secondArray = [];
-  for (let counter = 0; counter < 5; counter++) {
-    const randomNumberA = Math.floor(Math.random() * 11);
-    const randomNumberB = Math.floor(Math.random() * 11);
-    firstArray.push(randomNumberA);
-    secondArray.push(randomNumberB);
-  }
-  console.log(firstArray);
-  console.log(secondArray);
-  for (let counter = 0; counter < 5; counter++) {
-    if (firstArray.includes(secondArray[counter])) {
-      console.log(`Se repite el número ${secondArray[counter]}´);
-    }
-  }
-};
+// const sevenLoop = () => {
+//   const firstArray = [];
+//   const secondArray = [];
+//   for (let counter = 0; counter < 5; counter++) {
+//     const randomNumberA = Math.floor(Math.random() * 11);
+//     const randomNumberB = Math.floor(Math.random() * 11);
+//     firstArray.push(randomNumberA);
+//     secondArray.push(randomNumberB);
+//   }
+//   console.log(firstArray);
+//   console.log(secondArray);
+//   for (let counter = 0; counter < 5; counter++) {
+//     if (firstArray.includes(secondArray[counter])) {
+//       console.log(`Se repite el número ${secondArray[counter]}´);
+//     }
+//   }
+// }
 
-sevenLoop();
+// sevenLoop();
+
+//Imprima los indices de posicion del array para los numeros mayores de 5
+let numeros = [1, 6, 91, 2, 33, 13, 10, 4, 5, 23, 8, 2];
+
+function imprimirNumerosAltos(array) {
+  for (let index = 0; index < array.length; index++) {
+    let element = array[index];
+    if (element > 5 && element <= 10) {
+      console.log(element);
+    }
+    // return coleccion
+  }
+}
+imprimirNumerosAltos(numeros);

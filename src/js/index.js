@@ -108,3 +108,38 @@ function imprimirNumerosAltos(array) {
   }
 }
 imprimirNumerosAltos(numeros);
+
+const fraseLorem =
+  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita officia nemo dolores earum placeat corrupti hic, alias perferendis ducimus animi dolore modi temporibus laboriosam recusandae laborum quis molestias molestiae eligendi?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus eaque, neque necessitatibus harum, labore, unde corrupti corporis aliquam fugiat adipisci aliquid fugit incidunt dolor ad eos! Repellendus repudiandae maxime neque. Adipisci possimus maiores ducimus, voluptates, corporis dolorem quo modi, perferendis tempora nobis qui! Dignissimos possimus, doloremque corrupti provident temporibus molestias adipisci maxime illum numquam fugit hic officiis, quisquam quam beatae. Nam animi impedit, itaque aut, eligendi iste earum cumque ipsum magnam minima quo fuga! Ipsa numquam ullam deserunt velit, sunt tenetur laboriosam repellendus sapiente impedit neque deleniti? Dolores, alias blanditiis.";
+const palabras = fraseLorem.split(" ");
+
+for (let palabra of palabras) {
+  if (palabra.includes("e")) {
+    console.log(palabra);
+  }
+}
+
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York",
+};
+for (let key in person) {
+  console.log(key + ": " + person[key]);
+}
+
+const objeto = {
+  prop: "valor1",
+  propiedad: "valor2",
+  caracteristica: "valor3",
+  algomas: "valor4",
+  otraPropiedadMasLarga: "valor5",
+  sol: "valor6",
+  nombreLargoPropiedad: "valor7",
+};
+
+for (let key in objeto) {
+  if (key.length > 9) {
+    console.log(key);
+  }
+}
